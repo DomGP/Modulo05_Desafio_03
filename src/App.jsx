@@ -11,6 +11,7 @@ import Detalle from './Views/Detalle';
 //CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import PikaProvider from './Context/PikachuContext';
 
 function App() {
 

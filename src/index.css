@@ -34,9 +34,15 @@ a{
 }
 
 /* HOME */
-h1{
+.homeStyle{
   text-align: center;
   margin-top: 2em;
+
+}
+.imgHome{
+  width: 40em;
+  height: auto;
+  margin-top: 1em;
 }
 
 /* DETALLE */
