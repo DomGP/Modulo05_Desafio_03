@@ -5,9 +5,9 @@ import { PokeContext } from "../Context/PokeContext"
 const Detalle = () => {
 
     const navigate = useNavigate();
-    const {id} = useParams();
+    const {name} = useParams();
     const {pokemones} = useContext(PokeContext)
-    let pokemon = pokemones.find((pokemon) => pokemon.id == id);
+    let pokemon = pokemones.find((pokemon) => pokemon.name == name);
 
   return (
         <div className="cardsStyle">
@@ -30,4 +30,4 @@ const Detalle = () => {
   )
 }
 
-export default Detalle
+export default Detalle;

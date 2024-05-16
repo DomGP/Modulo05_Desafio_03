@@ -25,7 +25,7 @@ function App() {
           path='/pokemones'
           element={<Pokemones/>}/>
         <Route
-          path='/pokemon/:id'
+          path='/pokemon/:name'
           element={<Detalle/>}/>
       </Routes>
     </div>

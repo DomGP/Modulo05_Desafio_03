@@ -8,7 +8,7 @@ const Pokemones = () => {
 
   const {pokemones} = useContext(PokeContext);
 
-  const [idPokemon, setIdPokemon] = useState(null);
+  const [selectedPokemon, setSelectedPokemon] = useState('');
 
   return (
     <div className='container'>
@@ -16,16 +16,16 @@ const Pokemones = () => {
         <select
           className="form-select"
           arial-label='Default select example'
-          onChange={(e)=> setIdPokemon(e.target.value)}>
+          onChange={(e)=> setSelectedPokemon(e.target.value)}>
             <option value=''> Selecciona un Pokemón </option>
             {pokemones && pokemones.map((pokemon) => (
-              <option key={pokemon.id} value={pokemon.id}>
+              <option key={pokemon.id} value={pokemon.name}>
                 {pokemon.name}
               </option>
             ))}
         </select>
         <button 
-          onClick={() => navigate(`/pokemon/${idPokemon}`)}
+          onClick={() => navigate(`/pokemon/${selectedPokemon}`)}
           className="btn btn-success mt-2">
           Mostrar Detalles
         </button>
@@ -34,4 +34,4 @@ const Pokemones = () => {
   )
 }
 
-export default Pokemones
+export default Pokemones;
