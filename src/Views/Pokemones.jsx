@@ -24,7 +24,6 @@ const Pokemones = () => {
               </option>
             ))}
         </select>
-        <img src={pokemon.imageUrl} className="card-img-top imgStyle" alt="..." />
         <button 
           onClick={() => navigate(`/pokemon/${idPokemon}`)}
           className="btn btn-success mt-2">
