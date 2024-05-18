@@ -11,7 +11,6 @@ const Pokemones = () => {
   
 
   return (
-    <div className=''>
       <div className="text-center m-5">
         <h1>Pokemones</h1>
         <select
@@ -24,6 +23,7 @@ const Pokemones = () => {
               </option>
             ))}
         </select>
+        
         <button 
           onClick={() => selectedPokemon ? navigate(`/pokemon/${selectedPokemon}`) : setError('Por favor, selecciona un Pokémon')}
           className="btn btn-secondary mt-5 fs-5">
@@ -31,7 +31,6 @@ const Pokemones = () => {
         </button>
         {error && <p className="text-danger">{error}</p>}
       </div>
-    </div>
   )
 }
 
