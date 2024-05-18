@@ -26,7 +26,7 @@ const Pokemones = () => {
         </select>
         <button 
           onClick={() => selectedPokemon ? navigate(`/pokemon/${selectedPokemon}`) : setError('Por favor, selecciona un Pokémon')}
-          className="btn btn-primary mt-5 fs-5">
+          className="btn btn-secondary mt-5 fs-5">
           Mostrar Detalles
         </button>
         {error && <p className="text-danger">{error}</p>}
