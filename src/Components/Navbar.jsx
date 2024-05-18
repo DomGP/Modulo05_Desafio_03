@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+
 const Navbar = () => {
 
     const setActiveClass = ({isActive}) => (isActive ? 'active' : 'inActive')
@@ -11,7 +13,7 @@ const Navbar = () => {
                     <NavLink
                         className={setActiveClass}
                         to = '/' >
-                            
+                            <CatchingPokemonIcon sx={{ display: { xs: 'flex', md: 'flex' }, ml:5, fontSize:30 }} />
                     </NavLink>
                 <div className='menulinks'>
                     <NavLink

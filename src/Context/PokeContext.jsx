@@ -40,12 +40,20 @@ const PokeProvider = ({children}) => {
                 };
 
                 const type = newData.types.map(type => capitalizeFirstLetter(tipoTraduccion[type.type.name])).join(', ')
+                const statsArray = newData.stats.map((stat) => ({
+                    statsName: capitalizeFirstLetter(stat.stat.name),
+                    statsBase: stat.base_stat
+                  }));
+                  
 
                 return{
+                    id: newData.id,
                     name:capitalizeFirstLetter(newData.name),
-                    imageUrl: newData.sprites.front_shiny,
+                    imageUrl: newData.sprites.front_default,
                     type:type,
-                    id: newData.id
+                    stats: statsArray
+                    
+
                 }
         }));
         setPokemones(detallesPokemones)

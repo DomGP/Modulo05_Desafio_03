@@ -1,18 +1,17 @@
 import React from 'react'
-import { useContext } from 'react'
-import { PokeContext } from '../Context/PokeContext'
-import { PikachuContext } from '../Context/PikachuContext'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
-
-  const {pokemones} = useContext(PokeContext)
-  const {pikachu} = useContext(PikachuContext)
-  
 
   return (
     <div className='homeStyle'>
       <h1>Bienvenido Maestro Pokemón</h1>
-      <img src="./assets/imgs/pika.jpg" className='imgHome' alt="" />
+      <Link
+        to='/pokemones'>
+        <img src="./assets/imgs/pikachu1.png" className='imgHome' alt="" />
+      </Link>
+      
       
           {/* <img src={pikachu.imageUrl} className='imgHome' alt="" /> */}
     

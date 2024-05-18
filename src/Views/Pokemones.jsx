@@ -11,12 +11,13 @@ const Pokemones = () => {
   
 
   return (
-    <div className='container'>
+    <div className=''>
       <div className="text-center m-5">
+        <h1>Pokemones</h1>
         <select
           className="form-select"
           onChange={(e)=> setSelectedPokemon(e.target.value)}>
-            <option disabled selected> Selecciona un Pokemón </option>
+            <option disabled selected className="optionStyle"> Selecciona un Pokemón </option>
             {pokemones && pokemones.map((pokemon) => (
               <option key={pokemon.id} value={pokemon.name}>
                 {pokemon.name}
@@ -25,7 +26,7 @@ const Pokemones = () => {
         </select>
         <button 
           onClick={() => selectedPokemon ? navigate(`/pokemon/${selectedPokemon}`) : setError('Por favor, selecciona un Pokémon')}
-          className="btn btn-success mt-2">
+          className="btn btn-primary mt-5 fs-5">
           Mostrar Detalles
         </button>
         {error && <p className="text-danger">{error}</p>}
